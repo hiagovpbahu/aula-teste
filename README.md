@@ -1,39 +1,43 @@
-# Setup inicial
+# Most Basic Form Saver
 
-Requirementos: VSCode instalado, NodeJS instalado
+Code challenge to create a form and save its data on a server using only few code concepts in a basic way to explain for JavaScript newcomers.
 
-- Criar Formulário HTML no index.html
+## Basic Concepts Applied
 
-Conceitos:
-- Formulário
-- HTML
-- CSS
-- Javascript
-- FrontEnd
-- Requisição
-- DOM
+* HTML
+* CSS
+* Form
+* Javascript
+* FrontEnd
+* DOM
+* Request
+* HTTP Methods
+* BackEnd
+* NodeJS
+* Express
+* Port
+* Endpoint
+* Database
+* Libraries
 
-Rodar o comando: `npm init -y`
-Instalar express: `npm install express --save`
+## Initial Setup
 
-Fazer rodar a página em localhost
+### Requirements
+* NodeJS
+* VSCode (or any text editor of your preference)
 
-Instalar bodyParser: `npm install body-parser --save`
+### Running the project
 
-Criar endpoint para receber os dados da mensagem
+Install all dependencies:
 
-Instalar sequelize: `npm install body-parser --save`
+```bash
+npm install
+```
 
-Criar pasta de modelos e salvar a mensagem em banco de dados
+To start the project locally, run:
 
-Instalar sequelize: `npm install sqlite3 --save`
-
-Conceitos:
-- BackEnd
-- Express
-- Port
-- GET, POST, PUT, PATCH, DELETE
-- Banco de dados
-- NodeJS
-- Endpoint
-- Bibliotecas
+```bash
+npm run start
+# or
+node ./server.js
+```

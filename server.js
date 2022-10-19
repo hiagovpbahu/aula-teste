@@ -1,27 +1,27 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
-const modelos = require("./modelos")
-const Mensagem = modelos.mensagem
+const models = require("./models")
+const Message = models.message
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use('/app', express.static('.'))
+app.use('/', express.static('.'))
 
-app.post('/criar-mensagem', function (req, res) {
-    Mensagem.create(req.body)
+app.post('/message', function (req, res) {
+    Message.create(req.body)
         .then(data => {
             res.send(data)
         })
         .catch(erro => {
             res.status(500).send({
-                message: erro.message || "Ocorreu erro ao tentar criar uma nova mensagem."
+                message: erro.message || "An error occurred trying to create a message."
             })
         })
 })
 
-const db = require("./modelos")
+const db = require("./models")
 db.sequelize.sync()
 
 app.listen(3000, () => {
-    console.log(`O servidor está rodando na URL: http://localhost:3000`)
+    console.log(`Server is running on: http://localhost:3000`)
 })
