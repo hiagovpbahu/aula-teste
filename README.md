@@ -1,6 +1,6 @@
 # Most Basic Form Saver
 
-Code challenge to create a form and save its data on a server using only few code concepts in a basic way to explain for JavaScript newcomers.
+Code challenge to create a form and save its data on a server using only few code concepts in a basic way to explain to JavaScript newcomers.
 
 ## Basic Concepts Applied
 
