@@ -2,6 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const models = require("./models")
+
+models.sequelize.sync()
 const Message = models.message
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -18,9 +20,6 @@ app.post('/message', function (req, res) {
             })
         })
 })
-
-const db = require("./models")
-db.sequelize.sync()
 
 app.listen(3000, () => {
     console.log(`Server is running on: http://localhost:3000`)
